@@ -14,6 +14,17 @@
   <script src="./assets/js/onload.js"></script>
   <script src="./assets/js/copy.js"></script>
   <script src="./assets/js/math.js"></script>
+  <!-- https://docs.mathjax.org/en/latest/web/configuration.html?highlight=heading#configuration-using-an-in-line-script -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
   <!-- https://docs.mathjax.org/en/latest/web/hosting.html#getting-mathjax-via-git -->
   <script src="./assets/js/mathjax/tex-chtml.js" id="MathJax-script" async></script>
 </head>
@@ -46,7 +57,7 @@
       <div class="textareas__block--right" id="right">
         <h2 class="textareas__block__header">
           <!-- <img src ="./assets/img/output.svg"/>  -->
-          $f(x)=x^2$
+          <g>$f(x)=x^2$</g>
         </h2>
         <!-- https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard -->
         <div class="textareas__block__main" id="output"></div>
