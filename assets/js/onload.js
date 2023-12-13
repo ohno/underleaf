@@ -6,8 +6,10 @@ window.onload = function() {
     document.getElementById('input').value =`Hello!
 
 $$
-f(x) = ^2
+f(x) = x^2
 $$
+
+Start writing!
 `;
   }
   document.getElementById('output').value = math(document.getElementById('input').value);
