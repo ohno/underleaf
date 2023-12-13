@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MathJax Editor</title>
+  <meta name="description" content="Converting scientific notation to decimal notation.">
+  <!-- <meta property="og:image" content="./assets/img/OGP.png" /> -->
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml"/>  
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/url.js"></script>  
+  <script src="./assets/js/onload.js"></script>
+  <script src="./assets/js/copy.js"></script>
+  <script src="./assets/js/math.js"></script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" }},
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { matchFontHeight: false },
+        displayAlign: "left",
+        displayIndent: "2em"
+      });
+  </script>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <a class="logo" href="https://github.com/ohno/Underleaf/">
+      <!-- <img src ="./assets/img/logo.svg"/> -->
+      <h1>Underleaf</h1>
+    </a>
+    <!-- <a class="menu" href="https://github.com/ohno/Underleaf/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path class="heart" stroke="#BF3989" stroke-width="2" fill="#BF3989" fill-opacity="0" d="M13.35 20.13c-.76.69-1.93.69-2.69-.01l-.11-.1C5.3 15.27 1.87 12.16 2 8.28c.06-1.7.93-3.33 2.34-4.29 2.64-1.8 5.9-.96 7.66 1.1 1.76-2.06 5.02-2.91 7.66-1.1 1.41.96 2.28 2.59 2.34 4.29.14 3.88-3.3 6.99-8.55 11.76l-.1.09z"/></svg>
+    </a> -->
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <section class="textareas">
+      <svg id="arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0,0 L0,24 12,12"/></svg>
+      <div class="textareas__block--left">
+        <h2 class="textareas__block__header">
+          <!-- <img src ="./assets/img/input.svg"/> -->
+          \$f(x)=x^2\$
+        </h2>
+        <textarea class="textareas__block__main" id="input" cols="30" rows="10" onInput="document.getElementById('output').value=math(this.value)"></textarea>
+      </div>
+      <div class="textareas__block--right" id="right">
+        <h2 class="textareas__block__header">
+          <!-- <img src ="./assets/img/output.svg"/>  -->
+          $f(x)=x^2$
+        </h2>
+        <!-- https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard -->
+        <div class="textareas__block__main" id="output"></div>
+      </div>
+    </section>
+    
+    <section class="description">
+      This is just a local LaTeX editor using <a target="_blank" href="https://www.mathjax.org/">MathJax</a>. This was built in a few hours. There are no special functions. I recommend using <a target="_blank" href="https://www.overleaf.com/">Overleaf</a> if you need more functions. If you really want to thank me, you can <a target="_blank" href="https://github.com/ohno/Underleaf/">give me a star</a>.
+    </section>
+
+  </section>  
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <a target="_blank" href="https://github.com/ohno/">© 2023 Shuhei Ohno</a>
+  </footer>	
+
+</body>
+
+</html>
