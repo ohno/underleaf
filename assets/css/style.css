@@ -215,6 +215,7 @@ footer {
   position: relative;
   width: 100%;
 }
+
 @media screen and (max-width:840px) {
   .textareas {
     flex-direction: column;
@@ -282,6 +283,7 @@ footer {
   resize: none;
   width: 100%;
   word-wrap: break-word;
+  tab-size: 4;
 }
 
 @media screen and (max-width:840px) {
