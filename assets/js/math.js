@@ -2,5 +2,9 @@
 function math(input) {
   url(input);
   document.getElementById('output').innerHTML = input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  MathJax.Hub.Queue(["Typeset", MathJax.Hub, 'output']);
+  // https://docs.mathjax.org/en/v3.2-latest/web/typeset.html#handling-asynchronous-typesetting
+  MathJax.typesetPromise().then(() => {
+    // modify the DOM here
+    MathJax.typesetPromise();
+  }).catch((err) => console.log(err.message));
 }
