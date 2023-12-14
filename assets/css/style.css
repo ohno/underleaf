@@ -211,6 +211,7 @@ footer {
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
   display: flex;
   flex-direction: row;
+  /* align-items: flex-start; */
   justify-content: space-between;
   position: relative;
   width: 100%;
@@ -226,6 +227,7 @@ footer {
 .textareas__block--right {
   width: 50%;
   z-index: 10;
+  overflow: hidden;
 }
 
 @media screen and (max-width:840px) {
@@ -276,14 +278,17 @@ footer {
   border-top: 1px solid #c6cdd5;
   box-sizing: border-box;
   font-size: 15px;
-  height: 420px;
+  min-height: 420px;
+  height: 100%;
   max-width: 100%;
   outline: none;
   padding: 21px 25px;
-  resize: none;
+  resize: vertical;
   width: 100%;
   word-wrap: break-word;
   tab-size: 4;
+  overflow: scroll;
+  display: block;
 }
 
 @media screen and (max-width:840px) {
