@@ -3,10 +3,14 @@ function math(input) {
   // update URL
   url(input);
   // update textarea size
+  const lines = (document.getElementById('input').value + '\n').match(/\n/g).length;
+  document.getElementById('input').rows = lines;
   var Hin  = document.getElementById('input').scrollHeight;
   var Hout = document.getElementById('output').scrollHeight;
-  document.getElementById('input').height = (Math.max(Hin, Hout)*2) + "px";
+  document.getElementById('input').height = (Math.max(Hin, Hout)) + " px";
+  document.getElementById('output').height = (Math.max(Hin, Hout)) + " px";
   console.log(document.getElementById('input').height);
+  console.log(document.getElementById('output').height);
   console.log(document.getElementById('input').scrollHeight);
 
   // update LaTeX
