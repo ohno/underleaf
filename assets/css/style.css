@@ -213,10 +213,13 @@ footer {
 
 .textareas__block--left, 
 .textareas__block--right {
-  display: flow;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   width: 50%;
   z-index: 10;
   overflow: hidden;
+  position: relative;
 }
 
 @media screen and (max-width:840px) {
@@ -347,8 +350,8 @@ footer {
 #arrow {
   fill: #c6cdd5;
   position: absolute;
-  left: 50%;
-  top: 247px;
+  left: 0;
+  top: 50%;
   width: 14px;
   height: 14px;
   z-index: 9;
@@ -356,9 +359,9 @@ footer {
 
 @media screen and (max-width:840px) {
   #arrow {
-    top: 360px;
+    top: 0;
     left: calc(50% - 7px);
-    transform:rotate(90deg); 
+    transform:rotate(90deg);
   }
 }
 
