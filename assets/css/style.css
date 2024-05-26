@@ -131,22 +131,10 @@ header .logo h1 span {
 }
 
 header .menu,
-header .menu svg {
+header .menu svg,
+header .menu img {
   width: 28px;
   height: 28px;
-  transition: 0.2s;
-}
-
-header a.menu:hover {
-  opacity: 1;
-}
-
-.heart {
-  transition: 0.2s;
-}
-
-.heart:hover {
-  fill-opacity: 1;
   transition: 0.2s;
 }
 
@@ -225,6 +213,7 @@ footer {
 
 .textareas__block--left, 
 .textareas__block--right {
+  display: flow;
   width: 50%;
   z-index: 10;
   overflow: hidden;
