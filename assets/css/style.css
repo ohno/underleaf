@@ -269,7 +269,8 @@ footer {
   border: none;
   border-top: 1px solid #c6cdd5;
   box-sizing: border-box;
-  font-size: 15px;
+  font-family: Consolas;
+  font-size: 13px;
   min-height: 420px;
   height: 100%;
   max-width: 100%;
@@ -277,7 +278,8 @@ footer {
   padding: 21px 25px;
   resize: vertical;
   width: 100%;
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
+  white-space: nowrap;
   tab-size: 4;
   overflow: scroll;
   display: block;
