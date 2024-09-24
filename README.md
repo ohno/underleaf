@@ -12,12 +12,14 @@ This is just a local LaTeX editor using [MathJax](https://www.mathjax.org/). Thi
 npm install
 ```
 
-Please open `index.html` in your browser.
+Please open `index.html` in your browser. for Windows:
 
-```sh:Windows
+```sh
 start ./index.html
 ```
 
-```sh:Mac
+for Mac:
+
+```sh
 open ./index.html
 ```
