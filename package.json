@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "mathjax": "^3.2.2"
+    "mathjax": "^3.2.2",
+    "monaco-editor": "^0.52.0"
   }
 }

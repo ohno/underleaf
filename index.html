@@ -10,9 +10,6 @@
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml"/>  
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/url.js"></script>  
-  <script src="./assets/js/onload.js"></script>
-  <script src="./assets/js/math.js"></script>
   <!-- https://docs.mathjax.org/en/latest/web/configuration.html?highlight=heading#configuration-using-an-in-line-script -->
   <script>
     MathJax = {
@@ -26,6 +23,9 @@
   </script>
   <!-- https://docs.mathjax.org/en/latest/web/hosting.html#getting-mathjax-via-git -->
   <script src="./node_modules/mathjax/es5/tex-chtml.js" id="MathJax-script" async></script>
+  <script src="./node_modules/monaco-editor/min/vs/loader.js"></script>
+  <!-- <script src="./node_modules/monaco-latex/dist/index.js"></script> -->
+  <script src="./assets/js/script.js"></script>  
 </head>
 
 <body>
@@ -50,7 +50,7 @@
           <!-- <img src ="./assets/img/input.svg"/> -->
           \$f(x)=x^2\$
         </h2>
-        <textarea class="textareas__block__main" id="input" cols="30" rows="10" onInput="document.getElementById('output').value=math(this.value)"></textarea>
+        <div class="textareas__block__editor" id="input"></div>
       </div>
       <div class="textareas__block--right" id="right">
         <svg id="arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0,0 L0,24 12,12"/></svg>
@@ -59,7 +59,7 @@
           <g>$f(x)=x^2$</g>
         </h2>
         <!-- https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard -->
-        <div class="textareas__block__main" id="output"></div>
+        <div class="textareas__block__preview" id="output"></div>
       </div>
     </section>
     
