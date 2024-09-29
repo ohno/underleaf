@@ -88,10 +88,10 @@ require(["vs/editor/editor.main"], function () {
       value: initialInput,
       language: "latex",
       automaticLayout: true,
+      scrollBeyondLastLine: false,
     }
   );
-  // editor.layout({ width, height: contentHeight });
-  // first preview
+  // initial preview
   math(editor.getValue());
   // onInput preview
   editor.getModel().onDidChangeContent((event) => {
