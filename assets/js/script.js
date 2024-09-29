@@ -110,11 +110,8 @@ function math(input) {
   // escape
   input = input.replace(/</g, "&lt;");
   input = input.replace(/>/g, "&gt;");
-  document.getElementById('output').innerHTML = input;
-  // https://qiita.com/kosuke_shimizu/items/187467354c32a7e18d07
-  // https://docs.mathjax.org/en/v3.2-latest/web/typeset.html#handling-asynchronous-typesetting
-  MathJax.typesetPromise().then(() => {
-    // modify the DOM here
-    MathJax.typesetPromise();
-  }).catch((err) => console.log(err.message));
+  // update preview
+  let preview = document.getElementById('output');
+  preview.innerHTML = input;
+  MathJax.typesetPromise(preview.parentElement.childNodes);
 }
