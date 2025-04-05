@@ -89,6 +89,7 @@ require(["vs/editor/editor.main"], function () {
       language: "latex",
       automaticLayout: true,
       scrollBeyondLastLine: false,
+      wordWrap: "on",
     }
   );
   // initial preview
@@ -110,6 +111,14 @@ function math(input) {
   // escape
   input = input.replace(/</g, "&lt;");
   input = input.replace(/>/g, "&gt;");
+  // markdown to latex
+  for (const match of input.matchAll(/\`\`\`math\n(?<code>.*)\n\`\`\`/mg)) {
+    let before = match[0];
+    let after  = `\$\$${match.groups.code}\$\$`;
+    console.log(before, "to", after);
+    input = input.replace(before, after);
+  }
+  input = input.replace(/\`\`/g, "\$\$");
   // update preview
   let preview = document.getElementById('output');
   preview.innerHTML = input;

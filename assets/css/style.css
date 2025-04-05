@@ -294,7 +294,7 @@ footer {
   outline: none;
   overflow: scroll;
   padding: 21px 25px 0 25px;
-  white-space: nowrap;
+  white-space: break-spaces;
   width: 100%;
 }
 
